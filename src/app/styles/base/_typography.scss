@@ -1,0 +1,74 @@
+@use '../general/mixins' as *;
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--mantine-font-family);
+  font-size: var(--mantine-font-size-md);
+  line-height: var(--mantine-line-height);
+  color: var(--mantine-color-text);
+  background-color: var(--mantine-color-body);
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--mantine-font-family-headings);
+  text-wrap: balance;
+}
+
+@for $level from 1 through 6 {
+  h#{$level} {
+    @include heading($level);
+  }
+}
+
+p {
+  text-wrap: pretty;
+}
+
+small {
+  font-size: var(--mantine-font-size-sm);
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+a {
+  @include transition(color);
+  @include focus-ring;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--mantine-font-family-monospace);
+  font-size: 0.9em;
+}
+
+::selection {
+  background-color: var(--mantine-primary-color-light);
+  color: var(--mantine-color-text);
+}
+
+.text-truncate {
+  @include truncate;
+}
+
+.text-muted {
+  color: var(--mantine-color-dimmed);
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

@@ -1,0 +1,23 @@
+$font-path: '@/shared/assets/fonts';
+
+$inter-weights: (
+  'Thin': 100,
+  'ExtraLight': 200,
+  'Light': 300,
+  'Regular': 400,
+  'Medium': 500,
+  'SemiBold': 600,
+  'Bold': 700,
+  'ExtraBold': 800,
+  'Black': 900,
+);
+
+@each $name, $weight in $inter-weights {
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+    src: url('#{$font-path}/Inter18pt-#{$name}.woff2') format('woff2');
+  }
+}

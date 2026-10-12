@@ -1,0 +1,22 @@
+{
+  "welcome": "Welcome",
+  "home": {
+    "title": "Home"
+  },
+  "auth": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "login": "Log in",
+    "logout": "Log out"
+  },
+  "validation": {
+    "email": "Enter a valid email",
+    "passwordMin": "Password must be at least {{count}} characters"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "unexpected": "Something went wrong",
+    "goHome": "Go home"
+  }
+}
